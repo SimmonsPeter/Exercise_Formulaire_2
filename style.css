@@ -1,0 +1,91 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+    color: dimgray;
+}
+body{
+    font-size: 1rem;
+
+}
+h2{
+    padding-top: 20px;
+    font-family: sans-serif;
+    font-weight: normal;
+    color: dimgray;
+    margin-left: 10px;
+}
+h1{
+    font-family: sans-serif;
+    font-weight: normal;
+    color: dimgray;
+
+    padding: 0;
+}
+.border{
+
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 12px;
+
+    width: 650px;
+    margin: 5rem auto;
+    padding:45px;
+}
+.section1 , .section2, .section3{
+    margin: auto;
+    border-style: solid;
+    border-width: 2px;
+    width: 535px;
+    padding: 2rem;
+
+}
+.bouton{
+    margin:auto auto;
+    width: 100px;
+    display: flex;
+    padding-top: 20px;
+
+
+}
+.bouton1 {
+    margin-right:10px ;
+    padding:10px ;
+    font-size: 14px;
+    border-radius: 0;
+}
+td{
+padding:0.5rem 0;
+
+}
+input:focus:invalid {
+    background-color:dodgerblue;
+}
+input:valid{
+    background-image: url("check2.jpeg");
+    background-position:right top ;
+    background-repeat: no-repeat;
+    background-size: 10%;
+}
+td:first-child{
+    text-align: right;
+    padding-right:1.5rem ;
+}
+input,select{
+    height: 30px;
+    width: 300px;
+    padding: 0 8px;
+    font-size: 1rem;
+    border-radius: 0;
+    outline: 0;
+    background:#f1f1f1;
+    border:1px solid #ccc;
+}
+select{
+
+}
