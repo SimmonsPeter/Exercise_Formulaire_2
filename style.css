@@ -88,6 +88,6 @@ input,select{
     background:#f1f1f1;
     border:1px solid #ccc;
 }
-.section3{
-
+.bouton input:valid{
+    background-image:none;
 }
