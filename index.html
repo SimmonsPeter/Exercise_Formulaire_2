@@ -14,11 +14,11 @@
         <h2>Informations de Contact</h2>
         <div class="section1">
             <table>
-       <tr>   <td> <label>Nom :</label></td><td><input name="nom" type="text" required/></td></tr>
+       <tr>   <td> <label>Nom :</label></td><td><input name="nom" type="text" required placeholder="Jane Doe"/></td></tr>
              <tr>   <td>  <label>Courriel :</label></td><td><input name="courriel" type="email" required placeholder="user@courriel.com"
                                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/></td></tr>
-                <tr>   <td>    <label>Tèlèphone :</label></td><td><input name="telephone" type="tel" required/><br/></tr>
-                <tr>   <td>   <label>Compagnie :</label><</td><td><select name="compagnie" type="tel" required/>
+                <tr>   <td>    <label>Tèlèphone :</label></td><td><input name="telephone" type="tel" required placeholder="(555) 555-5555"/><br/></tr>
+                <tr>   <td>   <label>Compagnie :</label></td><td><select name="compagnie" type="tel" required/>
                 <option value=""></option>
                 <option value="PowerCorp">PowerCorp</option>
                 <option value="Videotoron">Videotoron</option>
@@ -28,9 +28,9 @@
 
 
                 </select>
-                <tr>   <td>   <label>Province :</label> </td><td><select>name="province" type="text" required
-                <option value=""></option>
-                <option value="Quebec">quebec</option>
+                <tr>   <td>   <label>Province :</label> </td> <td> <select>name="province" type="text" required
+
+                <option value="Quebec">Québec</option>
                 <option value="Ontario">Ontario</option>
                 <option value="Alberta">Alberta</option>
                 <option value="Île-du-Prince-Édouard">Île-du-Prince-Édouard</option>
@@ -39,8 +39,8 @@
                 <option value="Manitoba">Manitoba</option>
                 <option value="saskatchewan">saskatchewan</option>
                 <option value="Nunavut">Nunavut</option>
-                <option value="Colombie-Britannique">Colombie-Britannique</option> </td></tr>
-            </select>
+                <option value="Colombie-Britannique">Colombie-Britannique</option> </select></td> </tr>
+
 
             </table>
         </div>
@@ -58,8 +58,9 @@
         <div class="section3">
             <table>
             <tr>   <td> <label >Pseudonyme (3-9 caractères):</label></td><td><input id="pseudo" name="pseudo" type="text" required/></td></tr>
-                <tr>   <td> <label > Comentaires:</label > </td><td><textarea name="commentaire"></textarea></td></tr>
             </table>
+            <label id="comment" > Comentaires:</label >
+            <textarea name="commentaire"placeholder="Un long message"></textarea>
         </div>
         <div class="bouton">
             <input class="bouton1" type="submit" value="Envoyer"/>

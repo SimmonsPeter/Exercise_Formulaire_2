@@ -56,9 +56,11 @@ h1{
 }
 .bouton1 {
     margin-right:10px ;
-    padding:10px ;
+
     font-size: 14px;
     border-radius: 0;
+    align-items: center;
+    text-align: center;
 
 }
 td{
@@ -80,7 +82,7 @@ td:first-child{
 }
 input,select{
     height: 30px;
-    width: 250px;
+    width: 240px;
     padding: 0 8px;
     font-size: 1rem;
     border-radius: 0;
@@ -90,4 +92,14 @@ input,select{
 }
 .bouton input:valid{
     background-image:none;
+}
+.section3 textarea{
+    width:450px;
+    height: 30px;
+ padding: 5px 0 5px 8px;
+
+}
+#comment{
+   margin-right: 333px;
+    padding-bottom: 15px;
 }
