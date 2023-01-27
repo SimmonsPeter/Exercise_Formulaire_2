@@ -45,19 +45,21 @@
             </table>
         </div>
 
-        <h2>Informations de paiements</h2>
+        <h2>Informations sur la commande</h2>
         <div class="section2">
-            <label>Type de paiement:&nbsp; <input type="radio" name="typePaiement" value="Visa">&nbsp;Visa&nbsp;</input>
-                <input type="radio" name="typePaiement" value="MasterCard">&nbsp;MasterCard&nbsp;</input>
-                <input type="radio" name="typePaiement" value="American Express">&nbsp;American Express</input>
-            </label><br/>
-            <label>Numéro :&nbsp;<input name="numCarte" type="text" required placeholder="0000 0000 0000 0000" pattern="^(?:(?:\d{4}[- ]){3}\d{4}|\d{16})$"/></label><br/>
+            <table>
+            <tr>   <td> <label>Pommes :</label></td><td><input name="nom" type="text" required/></td></tr>
+            <tr>   <td>  <label>Patates :</label></td><td><input type="range" id="patates" name="patate"
+                                                                 min="5" max="40"></td></tr>
+            </table>
         </div>
 
-        <h2>Informations de livraison</h2>
+        <h2>Vos commentaires</h2>
         <div class="section3">
-            <label><input type="checkbox" name="signature">Signature requise</label><br/>
-            <label><input type="checkbox" name="Livraison">Livrer a la meme adresse de paiement</label><br/>
+            <table>
+            <tr>   <td> <label >Pseudonyme (3-9 caractères):</label></td><td><input id="pseudo" name="pseudo" type="text" required/></td></tr>
+                <tr>   <td> <label > Comentaires:</label > </td><td><textarea name="commentaire"></textarea></td></tr>
+            </table>
         </div>
         <div class="bouton">
             <input class="bouton1" type="submit" value="Envoyer"/>
