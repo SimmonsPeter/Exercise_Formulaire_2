@@ -3,43 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>Le Beau Formulaire de Yan</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
 <div class="border">
-    <form method="post" >
+    <form method="post">
 
         <h1> Fomulaire de paiement</h1>
         <h2>Informations de Contact</h2>
         <div class="section1">
             <table>
-       <tr>   <td> <label>Nom :</label></td><td><input name="nom" type="text" required placeholder="Jane Doe"/></td></tr>
-             <tr>   <td>  <label>Courriel :</label></td><td><input name="courriel" type="email" required placeholder="user@courriel.com"
-                                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/></td></tr>
-                <tr>   <td>    <label>Tèlèphone :</label></td><td><input name="telephone" type="tel" required placeholder="(555) 555-5555"/><br/></tr>
-                <tr>   <td>   <label>Compagnie :</label></td><td><select name="compagnie" type="tel" required/>
-                <option value=""></option>
-                <option value="PowerCorp">PowerCorp</option>
-                <option value="Videotoron">Videotoron</option>
-                <option value="Bell">Bell</option>
-                <option value="Starlink">Starlink</option></td></tr>
+                <tr>
+                    <td><label for="nom">Nom :</label></td>
+                    <td><input id="nom" name="nom" type="text" pattern="^.{2,100}$" required placeholder="Jane Doe"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="courriel">Courriel :</label></td>
+                    <!-- Read only pour un champ deja rempli qu'on ne peut pas changer.-->
+                    <td><input id="courriel" name="courriel" type="email" readonly value="user@courriel.com"
+                               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/></td>
+                </tr>
+                <tr>
+                    <td><label for="telephone">Telephone :</label></td>
+                    <td><input id="telephone" name="telephone" type="tel" placeholder="(555) 555-5555"/><br/>
+                </tr>
+                <tr>
+                    <td><label for="compagnie">Compagnie :</label></td>
+                    <td><select id="compagnie" name="compagnie">
+                        <option value=""></option>
+                        <option value="PowerCorp">PowerCorp</option>
+                        <option value="Videotoron">Videotoron</option>
+                        <option value="Bell">Bell</option>
+                        <option value="Starlink">Starlink</option>
+                    </select>
+                    </td>
+                </tr>
 
 
-
-                </select>
-                <tr>   <td>   <label>Province :</label> </td> <td> <select>name="province" type="text" required
-
-                <option value="Quebec">Québec</option>
-                <option value="Ontario">Ontario</option>
-                <option value="Alberta">Alberta</option>
-                <option value="Île-du-Prince-Édouard">Île-du-Prince-Édouard</option>
-                <option value="Nouveau-Brunswick">Nouveau-Brunswick</option>
-                <option value="Nouvelle-Écosse">Nouvelle-Écosse</option>
-                <option value="Manitoba">Manitoba</option>
-                <option value="saskatchewan">saskatchewan</option>
-                <option value="Nunavut">Nunavut</option>
-                <option value="Colombie-Britannique">Colombie-Britannique</option> </select></td> </tr>
+                <tr>
+                    <td><label for="province">Province :</label></td>
+                    <td><select id="province" name="province">
+                        <option value="Quebec">Québec</option>
+                        <option value="Ontario">Ontario</option>
+                        <option value="Manitoba">Manitoba</option>
+                    </select></td>
+                </tr>
 
 
             </table>
@@ -48,23 +59,33 @@
         <h2>Informations sur la commande</h2>
         <div class="section2">
             <table>
-            <tr>   <td> <label>Pommes :</label></td><td><input name="nom" type="text" required/></td></tr>
-            <tr>   <td>  <label>Patates :</label></td><td><input type="range" id="patates" name="patate"
-                                                                 min="5" max="40"></td></tr>
+                <tr>
+                    <td><label for="pommes">Pommes :</label></td>
+                    <td><input id="pommes" name="nom" type="text"/></td>
+                </tr>
+                <tr>
+                    <td><label for="patates">Patates :</label></td>
+                    <td><input type="range" id="patates" name="patate"
+                               min="5" max="40"></td>
+                </tr>
             </table>
         </div>
 
         <h2>Vos commentaires</h2>
         <div class="section3">
             <table>
-            <tr>   <td> <label >Pseudonyme (3-9 caractères):</label></td><td><input id="pseudo" name="pseudo" type="text" required/></td></tr>
+                <tr>
+                    <td><label for="pseudo">Pseudonyme (3-9 caractères):</label></td>
+                    <td><input id="pseudo" name="pseudo" type="text"/></td>
+                </tr>
             </table>
-            <label id="comment" > Comentaires:</label >
-            <textarea name="commentaire"placeholder="Un long message"></textarea>
+            <label for="comment"> Commentaires:</label>
+            <textarea id="comment" name="commentaire" placeholder="Un long message"></textarea>
         </div>
         <div class="bouton">
-            <input class="bouton1" type="submit" value="Envoyer"/>
-            <input class="bouton1" type="reset" value="Annuler">
+
+            <input onclick="validatePhone()" class="bouton1" type="submit" value="Envoyer"/>
+            <input id="bouton2" class="bouton1" type="reset" value="Annuler">
         </div>
 
     </form>

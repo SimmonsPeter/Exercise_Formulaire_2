@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="styleGPT.css">
+</head>
+<body>
+<form>
+  <label for="nom">Nom:</label>
+  <input type="text" id="nom" name="nom"><br><br>
+  <label for="courriel">Courriel:</label>
+  <input type="email" id="courriel" name="courriel"><br><br>
+  <label for="telephone">Telephone:</label>
+  <input type="tel" id="telephone" name="telephone"><br><br>
+  <label for="compagnie">Compagnie:</label>
+  <input type="text" id="compagnie" name="compagnie"><br><br>
+  <label for="province">Province:</label>
+  <select id="province" name="province">
+    <option value="Alberta">Alberta</option>
+    <option value="British Columbia">British Columbia</option>
+    <option value="Manitoba">Manitoba</option>
+    <option value="New Brunswick">New Brunswick</option>
+    <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+    <option value="Nova Scotia">Nova Scotia</option>
+    <option value="Ontario">Ontario</option>
+    <option value="Prince Edward Island">Prince Edward Island</option>
+    <option value="Quebec">Quebec</option>
+    <option value="Saskatchewan">Saskatchewan</option>
+    <option value="Northwest Territories">Northwest Territories</option>
+    <option value="Nunavut">Nunavut</option>
+    <option value="Yukon">Yukon</option>
+  </select><br><br>
+  <label for="pommes">Pommes:</label>
+  <input type="number" id="pommes" name="pommes" min="0"><br><br>
+  <label for="pseudonyme">Pseudonyme:</label>
+  <input type="text" id="pseudonyme" name="pseudonyme" minlength="3" maxlength="9"><br><br>
+  <label for="commentaires">Commentaires:</label>
+  <textarea id="commentaires" name="commentaires"></textarea><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
